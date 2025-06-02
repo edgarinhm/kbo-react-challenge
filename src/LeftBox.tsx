@@ -10,7 +10,7 @@ function LeftBox({ position, changePostion }: Readonly<LeftBoxProps>) {
   const [disabled, setDisabled] = useState(true);
 
   const handleClick = (event: MouseEvent<HTMLDivElement>) => {
-    changePostion(`${event.clientX} ${event.clientY}`);
+    changePostion(`${event.clientX}px, ${event.clientY}px`);
     setDisabled(false);
   };
 
