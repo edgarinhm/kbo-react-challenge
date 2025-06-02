@@ -1,0 +1,18 @@
+.button-red {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  height: 50px;
+  width: 260px;
+  border-radius: 32px;
+  cursor: pointer;
+}
+.button-red:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-text);
+  border-color: var(--button-hover-border);
+}
+
+.button-red:disabled {
+  background-color: var(--button-disabled-bg);
+  color: var(--button-disabled-text);
+}

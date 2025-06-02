@@ -1,0 +1,15 @@
+Feel free to use Google or any other search engines for this
+
+1. Create button component (as per the button-spec.png sample provided) and add it to LeftBox component
+  - Add required styles using CSS
+  - Default button state should be disabled
+  - For accessibility, screen readers should label it as "Click the button to move it to original position"
+
+2. Add click event to LeftBox and:
+  - Move button position to the clicked position
+  - Maintain click counter and click position, displayed in RightBox
+  - Enable the button
+
+3. Add click event to button and when clicked:
+  - Button will disable
+  - Move to its original position
