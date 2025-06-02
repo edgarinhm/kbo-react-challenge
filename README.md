@@ -4,7 +4,7 @@
 ![image](https://github.com/user-attachments/assets/5ea0e51e-2f04-4eba-9ce1-7b30a2efc16e)
 
 ## Demo
-[demo][https://edgarinhm.github.io/kbo-react-challendge]
+https://edgarinhm.github.io/kbo-react-challenge
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
