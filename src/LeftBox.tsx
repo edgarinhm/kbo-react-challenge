@@ -1,4 +1,4 @@
-import { MouseEvent, useState } from "react";
+import { FormEvent, MouseEvent, useState } from "react";
 import Button from "./Button";
 
 interface LeftBoxProps {
@@ -14,7 +14,8 @@ function LeftBox({ position, changePostion }: Readonly<LeftBoxProps>) {
     setDisabled(false);
   };
 
-  const resetState = () => {
+  const resetState = (event: FormEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
     setDisabled(true);
     changePostion("0 0");
   };
