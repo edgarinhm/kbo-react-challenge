@@ -1,13 +1,22 @@
-import { MouseEvent, useState } from 'react';
-import Button from './Button';
+import { MouseEvent, useState } from "react";
+import Button from "./Button";
 
-function LeftBox() {
-  const [disabled, setDisabled] = useState(false);
-  const [cacheTransform, setCacheTransform] = useState(`0 0`);
+interface LeftBoxProps {
+  position: string;
+  changePostion: (postion: string) => void;
+}
+
+function LeftBox({ position, changePostion }: Readonly<LeftBoxProps>) {
+  const [disabled, setDisabled] = useState(true);
 
   const handleClick = (event: MouseEvent<HTMLDivElement>) => {
-    setCacheTransform(`${event.clientX} ${event.clientY}`);
-    setDisabled((state) => !state);
+    changePostion(`${event.clientX} ${event.clientY}`);
+    setDisabled(false);
+  };
+
+  const resetState = () => {
+    setDisabled(true);
+    changePostion("0 0");
   };
 
   return (
@@ -15,13 +24,14 @@ function LeftBox() {
       className="left"
       role="button"
       onClick={handleClick}
-      aria-description="left button"
+      aria-label="left button"
     >
       <Button
-        style={{ transform: `translate(${cacheTransform})` }}
-        text={'click me'}
+        style={{ transform: `translate(${position})` }}
+        text={"click me"}
         disable={disabled}
-        aria-label={'Click the button to move it to original position'}
+        title={"Click the button to move it to original position"}
+        onClick={resetState}
       />
     </div>
   );
