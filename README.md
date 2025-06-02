@@ -1,5 +1,11 @@
 # React + TypeScript + Vite
 
+## Screenshot
+![image](https://github.com/user-attachments/assets/5ea0e51e-2f04-4eba-9ce1-7b30a2efc16e)
+
+## Demo
+[demo][https://edgarinhm.github.io/kbo-react-challendge]
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
