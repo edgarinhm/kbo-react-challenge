@@ -17,7 +17,7 @@ function LeftBox({ position, changePostion }: Readonly<LeftBoxProps>) {
   const resetState = (event: FormEvent<HTMLButtonElement>) => {
     event.stopPropagation();
     setDisabled(true);
-    changePostion("0 0");
+    changePostion("0, 0");
   };
 
   return (
